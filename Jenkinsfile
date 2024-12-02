@@ -5,7 +5,7 @@ pipeline{
         stage('clone'){
             steps{
                 // Clone the repository
-                git 'https://github.com/VootlaSaiCharan/demo-react.git'
+                git 'https://github.com/Piyush-790/demo-react.git'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline{
         stage('copy build files to the web server'){
             steps{
                 // Copy the build files to the web server
-                sh 'cd build && cp -r * /var/www/html/'
+                sh 'cd build && cp -R * /var/www/html/'
             }
         }
     }
